@@ -56,10 +56,10 @@ fancy_echo "Installing rbenv, to change Ruby versions ..."
   successfully brew install rbenv
 
   if ! grep -qs "rbenv init" ~/.zshrc; then
-    successfully echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+    successfully echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 
     fancy_echo "Enable shims and autocompletion ..."
-      successfully eval "$(rbenv init -)"
+      successfully eval "$(rbenv init - zsh)"
   fi
 
   source ~/.zshrc
